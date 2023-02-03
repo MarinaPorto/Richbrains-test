@@ -1,0 +1,18 @@
+include courses-list.pug
+
+
+mixin cards(courses)
+  each item in courses
+    if item.logo 
+      include card-course.pug
+    else 
+      include card-green.pug
+
+
+.main_cards
+  +cards(courses)
+  .load__btn 
+    p More programmes 
+    img(src='./components/cards/icon/icon_refresh.svg' alt='icon' class='more-icon')
+
+

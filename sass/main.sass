@@ -1,0 +1,422 @@
+@font-face
+  font-family: 'Helvetica'
+  src: url('../fonts/Helvetica.eot?#iefix') format('embedded-opentype'),
+
+@font-face
+  font-family: 'Helvetica Bold'
+  src: url('../fonts/Helvetica-Bold.eot?#iefix') format('embedded-opentype'),
+
+html
+  box-sizing: border-box
+  scroll-behavior: smooth
+
+*,
+*::after,
+*::before
+  box-sizing: inherit
+
+ul[class],
+ol[class]
+  padding: 0
+  list-style: none
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd
+  margin: 0
+
+img
+  max-width: 100%
+  display: block
+
+input,
+button,
+textarea,
+select
+  font: inherit
+
+a
+  text-decoration: none
+
+body
+  font-family: 'Helvetica', sans-serif
+  font-size: 16px
+
+.wrapper
+  max-width: 1440px
+  margin: 0 auto
+  background-color: #F7F7F7
+  padding: 60px 124px
+
+  main
+    display: flex
+    gap: 14px
+
+h1
+  font-family: 'Playfair Display', serif
+  font-weight: 400
+  font-size: 30px
+  line-height: 46px
+  color: #3E3E3E
+  margin-bottom: 33px
+
+.navigation
+  display: block
+  max-width: 286px
+  height: 80%
+  background-color: #fff
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.06)
+  border-radius: 2px
+  padding-top: 33px
+  padding-left: 18px
+  padding-bottom: 30px
+  padding-right: 14px
+
+  &__title
+
+    padding-bottom: 19px
+
+    display: flex
+    align-items: center
+    font-family: 'Helvetica'
+    font-weight: 400
+    font-size: 13px
+    line-height: 20px
+    text-transform: uppercase
+    color: #259609
+
+  .nav-img
+    margin-right: 11px
+
+  .main_nav
+    max-width: 256px
+    padding-top: 26px
+    padding-bottom: 42px
+    padding-left: 10px
+    border-top: 1px solid #ECECEC
+
+  .nav__item
+    margin-bottom: 24px
+    padding-right: 10px
+
+  .nav__link
+    display: flex
+    justify-content: space-between
+    gap: 20px
+    align-items: center
+    font-weight: 700
+    font-size: 16px
+    line-height: 22px
+    color: #3E3E3E
+    &:hover
+      color: #259609
+    &:hover .item__img path
+      stroke: #259609
+
+  .subnav__items
+    margin-top: -14px
+
+  .subnav__item:hover
+    background-color: #F2F2F2
+    border-radius: 3px
+    color: #259609
+
+  .subnav__link
+    display: block
+    padding: 10px 12px
+    color: #3E3E3E
+    font-weight: 400
+    font-size: 14px
+    line-height: 22px
+
+  .subnav__item:nth-child(4)
+    background-color: #ddEBDA
+    border-radius: 3px
+
+  .subnav__item:nth-child(4)   .subnav__link
+    color: #259609
+
+  .nav__item:last-child a
+    color: #259609
+    .item__img
+      transform: rotate(90deg)
+    .item__img path
+      stroke: #259609
+
+  .nav__btn
+    width: 256px
+    height: 44px
+    background-color: #FFFFFF
+    border: 1px solid #ddEBDA
+    border-radius: 3px
+    text-transform: uppercase
+    color: #259609
+    font-weight: 700
+    font-size: 14px
+    line-height: 16px
+    cursor: pointer
+
+.main_cards
+  display: flex
+  flex-wrap: wrap
+  gap: 23px
+  height: auto
+
+.content
+  height: 100%
+
+.icon-plus-green
+  display: none
+
+.card__btns
+  flex: 0 0 auto
+  width: 222px
+  height: 44px
+  margin-top: 11px
+  border-radius: 3px
+  border: none
+  text-transform: uppercase
+  cursor: pointer
+
+.card
+  width: 282px
+  padding: 30px
+  padding-top: 24px
+  height: 100%
+  display: flex
+  flex-direction: column
+  &_course
+    background-color: #FFFFFF
+    box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.06)
+    border-radius: 2px
+    border-top: 6px solid #259609
+    border-radius: 2px 2px 0px 0px
+
+    &-title
+      font-size: 13px
+      line-height: 20px
+      text-transform: uppercase
+      color: #259609
+      margin-bottom: 8px
+    &-subtitle
+      font-size: 20px
+      line-height: 30px
+      color: #3E3E3E
+      font-weight: 600
+      margin-bottom: 74px
+    &-details
+      display: flex
+      flex-direction: column
+      gap: 4px
+
+    &-status,
+    &-period
+      display: flex
+      gap: 12px
+      font-size: 14px
+      line-height: 16px
+      display: flex
+      align-items: center
+      color: #3E3E3E
+  &-logo
+    margin-left: auto
+
+  &__btn
+
+    background-color: #259609
+    color: #FFFFFF
+
+  &-green
+    background-color: #259609
+    box-shadow: 0px 22px 37px rgba(0, 0, 0, 0.2)
+    border-radius: 2px
+    color: #fff
+    position: relative
+
+    &__btn
+      background: rgba(255, 255, 255, 0.25)
+      color: #fff
+      cursor: pointer
+      transition: all 0.5s ease 0s
+    &-title
+      font-size: 16px
+      line-height: 22px
+      margin-bottom: 23px
+      font-weight: 600
+      max-width: 172px
+    &-duration,
+    &-period
+      font-size: 14px
+      line-height: 22px
+      margin-bottom: 20px
+      .duration-title,
+      .period-title
+        font-weight: 600
+      .period
+        margin-bottom: 30px
+    &-price
+      font-size: 32px
+      line-height: 44px
+      font-weight: 500
+      margin-top: 30px
+    &-icon
+      position: absolute
+      top: 20px
+      right: 20px
+      transition: all 0.5s ease 0s
+    &-icon
+      transform: rotate(135deg)
+
+.status,
+.price
+  display: none
+
+.card-green:hover .card-green-icon path
+  fill-opacity: 0.7
+
+.card-green:hover .card-green__btn
+  background-color: #fff
+  color: #259609
+
+.card-green:hover .card-green-icon
+  transform: rotate(90deg)
+
+.load__btn
+  margin: 0 auto
+  display: flex
+  gap: 12px
+  font-size: 14px
+  line-height: 16px
+  text-transform: uppercase
+  color: #3E3E3E
+  font-weight: 600
+  cursor: pointer
+  align-items: center
+  margin-top: 20px
+
+.nav-burger
+  display: none
+  width: 282px
+  height: 52px
+  background-color: #F1F1F1
+  border-radius: 3px
+  padding: 16px 26px
+
+.wrapper
+  @media (max-width: 1140px)
+    padding: 60px 100px
+
+  @media (max-width: 1100px)
+    padding: 60px 60px
+
+.main_cards
+  @media (max-width: 1100px)
+    gap: 12px
+
+@media (max-width: 1000px)
+  .wrapper
+    padding: 60px 30px
+
+  .main_cards
+    flex-direction: column
+    gap: 12px
+
+@media (max-width: 768px)
+
+  .main
+    flex-direction: column
+
+  .main_cards
+    flex-direction: row
+    justify-content: space-between
+    gap: 16px
+
+  .nav-burger
+    display: flex
+    justify-content: space-between
+    align-items: center
+    cursor: pointer
+
+  .navigation
+    display: none
+
+.nav-burger-title
+  font-family: 'Raleway', sans-serif
+  margin-right: auto
+  font-family: 'Raleway'
+  font-style: normal
+  font-weight: 500
+  font-size: 16px
+  line-height: 22px
+  display: flex
+  align-items: center
+  text-transform: uppercase
+  color: #000000
+
+.nav-burger-title
+  margin-right: 10px
+
+.card_logo
+  display: flex
+  align-items: center
+  margin-bottom: 28px
+
+@media (max-width: 400px)
+
+  h1
+    margin-bottom: 16px
+  .main
+    gap: 20px
+  .card_logo
+    margin-bottom: 12px
+  .nav-burger
+    width: 329px
+  .icon-plus-green
+    display: block
+  .card_course-status,
+  .card_course-period
+    display: none
+  .card_course-subtitle
+    margin-bottom: 8px
+    font-size: 16px
+    line-height: 22px
+  .wrapper
+    padding: 16px
+    background-color: #fff
+  .main_cards
+    justify-content: center
+  .card
+    width: 330px
+    padding: 20px 25px
+  .card-green
+    display: none
+  .card__btns
+    width: 280px
+    height: 44px
+    margin-top: 14px
+  .status,
+  .price
+    display: block
+  .status
+    font-size: 14px
+    line-height: 16px
+    color: #3E3E3E
+    margin-bottom: 58px
+  .price
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+    color: #3E3E3E
